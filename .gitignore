@@ -1,0 +1,21 @@
+# Compiled output
+target/
+*.class
+
+# IDE files
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+.vscode/
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Spring Boot configuration (optional, but don't ignore application.properties)
+# Keep your own configs, but ignore generated ones
