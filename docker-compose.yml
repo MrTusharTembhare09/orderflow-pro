@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./product-service
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - orderflow-net
+
+  frontend:
+    build: ./orderflow-ui
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - orderflow-net
+
+networks:
+  orderflow-net:
+    driver: bridge

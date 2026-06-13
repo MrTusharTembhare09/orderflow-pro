@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     // Fetch products from Spring Boot backend
     axios
-      .get("http://localhost:8080/api/products")
+      .get("/api/products")
       .then((response) => {
         setProducts(response.data);
         setLoading(false);
